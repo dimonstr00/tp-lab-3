@@ -2,24 +2,28 @@
 #include "Circle.h"
  
 double pi = 3.14;
-Circle::Circle(){}
+Circle::Circle(double radius){
+	this->radius = radius;
+	this->area = pi * radius * radius;
+	this->ference = 2 * pi*radius;
+}
 Circle::~Circle(){}
 void Circle::setRadius(double r)
 {
-	this->radius = fabs(r);
-	this->area = pi * this->radius*this->radius;
-	this->ference = 2 * pi*this->radius;
+	this->radius = r;
+	this->area = pi * r * r;
+	this->ference = 2 * pi*r;
 }
 void Circle::setArea(double a)
 {
 	this->area = a;
 	this->radius = sqrt(a / pi);
-	this->ference= 2 * pi*this->radius;
+	this->ference= a*2*radius;
 }
-void Circle::setFerence(double f)
+void Circle::setFerence(double ference)
 {
-	this->ference = f;
-	this->radius = f / (2 * pi);
+	this->ference = ference;
+	this->radius = ference / (2 * pi);
 	this->area= pi * this->radius*this->radius;
 }
 double Circle::getArea() 

@@ -2,14 +2,14 @@
 class Circle
 {  
 private:
-	double radius = 0, ference = 0, area = 0;
+	double radius, ference, area;
 public:
-	Circle();
+	Circle(double radius);
 	~Circle();
 
-	void setRadius(double radius);
+	void setRadius(double r);
 	void setFerence(double ference);
-	void setArea(double area);
+	void setArea(double a);
 
 	double getRadius();
 	double getFerence();
