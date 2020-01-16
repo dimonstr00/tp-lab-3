@@ -5,6 +5,7 @@ private:
 	double radius, ference, area;
 public:
 	Circle(double radius);
+	Circle();
 	~Circle();
 
 	void setRadius(double r);
