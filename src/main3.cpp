@@ -11,5 +11,5 @@ int main() {
 	cout << dt.getFuture(10) << endl << endl;
 
 	DateTime dt1(13, 11, 2019);
-	cout << dt2.getToday() << endl;
+	cout << dt1.getToday() << endl;
 } 
