@@ -1,8 +1,9 @@
 #include <iostream>
+#include <math.h>
 #include "task1.h"
-  
-int main()
-{
-	std::cout << calcDelta() << "\n";
+#include "Circle.h"
 
+int main() {
+	double delta = calcDelta();
+	std::cout << delta;
 }

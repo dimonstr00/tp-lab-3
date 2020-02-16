@@ -1,18 +1,18 @@
 #pragma once
-class Circle
-{  
+class Circle {
 private:
-	double radius, ference, area;
+	double radius;
+	double ference;
+	double area;
 public:
-	Circle(double radius);
-	Circle();
-	~Circle();
+	Circle(double radius_set);
 
-	void setRadius(double r);
+
+	void setRadius(double radius);
 	void setFerence(double ference);
-	void setArea(double a);
-
+	void setArea(double area);
 	double getRadius();
 	double getFerence();
 	double getArea();
+
 };

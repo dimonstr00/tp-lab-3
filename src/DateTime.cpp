@@ -1,5 +1,5 @@
 #include "DateTime.h"
-  
+
 DateTime::DateTime() 
 {
 	time_t seconds = time(NULL);

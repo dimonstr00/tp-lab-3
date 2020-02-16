@@ -2,9 +2,9 @@
 #include <time.h>
 #include <ctime>
 #include <string>
- 
+
 class DateTime 
-{ 
+{
 private:
 	struct tm Time;
 	static std::string Days[];

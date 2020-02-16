@@ -1,8 +1,9 @@
 #include <iostream>
+#include <math.h>
+#include "Circle.h"
 #include "task1.h"
- 
- 
-int main()
-{
-	std::cout << calcCost() << "\n";
+
+int main() {
+	double cost = calcCost();
+	std::cout << cost;
 }

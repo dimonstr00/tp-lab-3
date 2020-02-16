@@ -1,42 +1,43 @@
+#include <iostream>
+#define _USE_MATH_DEFINES
 #include <math.h>
 #include "Circle.h"
- 
-double pi = 3.14;
-Circle::Circle(double radius){
+using namespace std;
+Circle::Circle(double radius) {
 	this->radius = radius;
-	this->area = pi * radius * radius;
-	this->ference = 2 * pi*radius;
+	ference = 2 * M_PI* radius;
+	area = M_PI * radius * radius;
+
 }
-Circle::~Circle(){}
-void Circle::setRadius(double r)
+void Circle::setRadius(double radius)
 {
-	this->radius = r;
-	this->area = pi * r * r;
-	this->ference = 2 * pi*r;
-}
-void Circle::setArea(double a)
-{
-	this->area = a;
-	this->radius = sqrt(a / pi);
-	this->ference= a*2*radius;
-}
+	this->radius = radius;
+	ference = 2 * M_PI * radius;
+	area = M_PI * radius * radius;
+
+};
 void Circle::setFerence(double ference)
 {
 	this->ference = ference;
-	this->radius = ference / (2 * pi);
-	this->area= pi * this->radius*this->radius;
-}
-double Circle::getArea() 
-{
-	return this->area;
-}
+	radius = ference / (2 * M_PI);
+	area = M_PI * radius * radius;
 
-double Circle::getFerence() 
+};
+void Circle::setArea(double area)
 {
-	return this->ference;
-}
+	this->area = area;
+	radius = sqrt(area / M_PI);
+	ference = 2 * radius * M_PI;
 
-double Circle::getRadius() 
+};
+double Circle::getRadius()
 {
-	return this->radius;
-}
+	return radius;
+};
+double Circle::getFerence()
+{
+	return ference;
+};
+double Circle::getArea() {
+	return area;
+};

@@ -1,26 +1,31 @@
-#include "task1.h"
+#include <iostream>
+#define _USE_MATH_DEFINES
+#include <math.h>
 #include "Circle.h"
- 
+#include "task1.h"
+
+
+using namespace std;
 double calcDelta() 
-{ 
-	Circle earth = Circle();
-	Circle rope = Circle();
-
-	earth.setRadius(6378.1);
-	rope.setFerence(earth.getFerence() + 0.001);
-
-	double dif = rope.getRadius() - earth.getRadius();
-	return dif*1000;
-}
-double calcCost() 
 {
-	Circle pool = Circle();
-	Circle fRad = Circle();
-	pool.setRadius(3);
-	fRad.setRadius(pool.getRadius() + 1);
+	double radius = 6378100.0;
+	double rope = 1.0;
+	Circle earth(radius);
 
-	double road = (fRad.getArea() - pool.getArea()) * 1000;
-	double railing = fRad.getFerence() * 2000;
+	double dlina = earth.getFerence() + rope;
+	Circle nCircle();
+	earth.setFerence(dlina);
 
-	return road + railing;
+	double delta = earth.getRadius() - radius;
+
+	return delta;
+}
+double calcCost() {
+	double pul_rad = 3.0;
+	Circle pul = Circle(pul_rad);
+	Circle fence = Circle(pul_rad + 1.0);
+	fence.setRadius(pul_rad + 1.0);
+	double sum = 1000 * pul.getFerence() + 2000 * fence.getFerence();
+
+	return sum;
 }
